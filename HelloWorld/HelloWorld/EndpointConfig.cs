@@ -8,16 +8,5 @@ namespace HelloWorld
 		This class configures this endpoint as a Server. More information about how to configure the NServiceBus host
 		can be found here: http://nservicebus.com/GenericHost.aspx
 	*/
-    public class EndpointConfig : IConfigureThisEndpoint, IWantToRunAtStartup
-    {
-        public void Run()
-        {
-            LogManager.GetLogger("EndpointConfig").Info("Hello World!");
-        }
-
-        public void Stop()
-        {
-
-        }
-    }
+    public class EndpointConfig : IConfigureThisEndpoint, AsA_Client { }
 }
