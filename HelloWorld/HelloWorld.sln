@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{69A761
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{5F167065-E96E-4BD2-8677-6D2727A9B476}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldServer", "HelloWorldServer\HelloWorldServer.csproj", "{C2F0C362-6C31-4F78-8DA6-A2A4CA759BFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{5F167065-E96E-4BD2-8677-6D2727A9B476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F167065-E96E-4BD2-8677-6D2727A9B476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F167065-E96E-4BD2-8677-6D2727A9B476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2F0C362-6C31-4F78-8DA6-A2A4CA759BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F0C362-6C31-4F78-8DA6-A2A4CA759BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F0C362-6C31-4F78-8DA6-A2A4CA759BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F0C362-6C31-4F78-8DA6-A2A4CA759BFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
