@@ -1,18 +1,19 @@
-namespace HelloWorldServer 
-{
-    using NServiceBus;
+using NServiceBus;
 
-	/*
-		This class configures this endpoint as a Server. More information about how to configure the NServiceBus host
-		can be found here: http://nservicebus.com/GenericHost.aspx
-	*/
-    public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, IWantCustomInitialization
+namespace HelloWorldServer
+{
+    public class Class1 : IConfigureThisEndpoint, AsA_Server,
+                IWantCustomInitialization, ISpecifyMessageHandlerOrdering
     {
         public void Init()
         {
-            NServiceBus.Configure.With()
-                .DefaultBuilder()
-                .XmlSerializer("http://acme.com/");
+            NServiceBus.Configure.With().DefaultBuilder()
+                .XmlSerializer("http://acme.com");
+        }
+
+        public void SpecifyOrder(Order order)
+        {
+            order.SpecifyFirst<Auth>();
         }
     }
 }

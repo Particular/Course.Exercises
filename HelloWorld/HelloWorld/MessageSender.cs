@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using log4net;
 using Messages;
 using NServiceBus;
-using log4net;
 
 namespace HelloWorld
 {
@@ -14,6 +10,7 @@ namespace HelloWorld
 
         public void Run()
         {
+            Bus.OutgoingHeaders["user"] = "udi";
             var message = new Request { SaySomething = "Say something" };
             Bus.Send(message);
             LogManager.GetLogger("MessageSender").Info("Sent message.");
