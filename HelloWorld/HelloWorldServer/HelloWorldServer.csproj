@@ -58,6 +58,7 @@
     <Compile Include="EndpointConfig.cs" />
     <Compile Include="ISaySOmething.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryHandler.cs" />
     <Compile Include="RequestHandler.cs" />
     <Compile Include="RequestWithResponseHandler.cs" />
     <Compile Include="SaySomething.cs" />
