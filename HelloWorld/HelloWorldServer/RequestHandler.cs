@@ -16,7 +16,7 @@ namespace HelloWorldServer
         {
             LogManager.GetLogger("RequestHandler").Info(message.SaySomething);
             LogManager.GetLogger("RequestHandler").Info(
-                saysSomething.InResponseTo(message.SaySomething));
+                saysSomething.InResponseTo(message.SaySomething.Value));
         }
     }
 }
