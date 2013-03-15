@@ -1,5 +1,3 @@
-using log4net;
-
 namespace HelloWorld 
 {
     using NServiceBus;
