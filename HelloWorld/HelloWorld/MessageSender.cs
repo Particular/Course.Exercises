@@ -14,7 +14,7 @@ namespace HelloWorld
 
         public void Run()
         {
-            var message = new Request { SaySomething = "Say something" };
+            var message = new RequestMessage { SaySomething = "Say something" };
             Bus.Send("helloWorldServer", message);
             LogManager.GetLogger("MessageSender").Info("Sent message.");
         }
