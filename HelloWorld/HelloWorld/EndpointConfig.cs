@@ -1,5 +1,7 @@
 namespace HelloWorld 
 {
+    using Messages;
+
     using NServiceBus;
 
 	/*
@@ -10,9 +12,10 @@ namespace HelloWorld
     {
         public void Init()
         {
-            NServiceBus.Configure.With()
+            Configure.With()
                 .DefaultBuilder()
-                .XmlSerializer("http://acme.com/");
+                .XmlSerializer("http://acme.com/")
+                .DefiningMessagesAs(t => t.Assembly == typeof(RequestMessage).Assembly && t.Name.EndsWith("Message"));
         }
     }
 }

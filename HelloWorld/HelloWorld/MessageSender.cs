@@ -10,7 +10,7 @@ namespace HelloWorld
 
         public void Start()
         {
-            var message = new Request { SaySomething = "Say something" };
+            var message = new RequestMessage { SaySomething = "Say something" };
             Bus.Send(message);
             LogManager.GetLogger("MessageSender").Info("Sent message.");
         }

@@ -4,9 +4,9 @@ using NServiceBus.Logging;
 
 namespace HelloWorldServer
 {
-    class RequestHandler : IHandleMessages<Request>
+    class RequestHandler : IHandleMessages<RequestMessage>
     {
-        public void Handle(Request message)
+        public void Handle(RequestMessage message)
         {
             LogManager.GetLogger("RequestHandler").Info(message.SaySomething);
         }
