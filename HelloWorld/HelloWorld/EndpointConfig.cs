@@ -13,7 +13,7 @@ namespace HelloWorld
     {
         public void Customize(BusConfiguration configuration)
         {
-           configuration.UsePersistence<RavenDBPersistence>();
+            configuration.UsePersistence<RavenDBPersistence>();
         }
 
         public void Start()
