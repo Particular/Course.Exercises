@@ -10,6 +10,8 @@
 
         public void Start()
         {
+            Bus.OutgoingHeaders["user"] = "udi";
+
             var message = new Request { SaySomething = "Say something" };
 
             Bus.Send(message);
