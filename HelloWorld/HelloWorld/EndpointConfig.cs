@@ -13,6 +13,9 @@ namespace HelloWorld
     {
         public void Customize(BusConfiguration configuration)
         {
+            configuration.UseSerialization<XmlSerializer>()
+                .Namespace("http://acme.com/");
+
             configuration.Conventions()
                 .DefiningMessagesAs(t => t.Assembly == typeof(RequestMessage).Assembly && t.Name.EndsWith("Message"));
 
