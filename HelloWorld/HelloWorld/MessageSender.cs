@@ -10,7 +10,7 @@
 
         public void Start()
         {
-            var message = new RequestMessage { SaySomething = "Say something" };
+            var message = new Request { SaySomething = "Say something" };
 
             Bus.Send(message);
             

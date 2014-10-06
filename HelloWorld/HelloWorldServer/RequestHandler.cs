@@ -4,9 +4,9 @@
 	using NServiceBus;
 	using NServiceBus.Logging;
 
-	class RequestHandler : IHandleMessages<RequestMessage>
+	class RequestHandler : IHandleMessages<Request>
     {
-        public void Handle(RequestMessage message)
+        public void Handle(Request message)
         {
             LogManager.GetLogger("RequestHandler").Info(message.SaySomething);
         }

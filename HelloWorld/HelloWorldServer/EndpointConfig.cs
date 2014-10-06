@@ -2,8 +2,7 @@ using NServiceBus.Persistence;
 
 namespace HelloWorldServer
 {
-	using Messages;
-	using NServiceBus;
+    using NServiceBus;
 
 	/*
 		This class configures this endpoint as a Server. More information about how to configure the NServiceBus host
@@ -15,9 +14,6 @@ namespace HelloWorldServer
         {
             configuration.UseSerialization<XmlSerializer>()
                 .Namespace("http://acme.com/");
-
-            configuration.Conventions()
-                .DefiningMessagesAs(t => t.Assembly == typeof(RequestMessage).Assembly && t.Name.EndsWith("Message"));
 
             configuration.UsePersistence<RavenDBPersistence>();
         }

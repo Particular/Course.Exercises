@@ -1,7 +1,8 @@
 ﻿namespace Messages
 {
     [Expires(60)]
-    public class RequestMessage
+    [Message]
+    public class Request
     {
         public string SaySomething { get; set; }
     }
