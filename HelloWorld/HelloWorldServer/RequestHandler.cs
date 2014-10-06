@@ -1,4 +1,6 @@
-﻿namespace HelloWorldServer
+﻿using System;
+
+namespace HelloWorldServer
 {
 	using Messages;
 	using NServiceBus;
@@ -9,6 +11,8 @@
         public void Handle(Request message)
         {
             LogManager.GetLogger("RequestHandler").Info(message.SaySomething);
+
+            throw new InvalidOperationException("Exception occurred!");
         }
     }
 }
