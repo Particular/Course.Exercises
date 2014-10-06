@@ -12,7 +12,7 @@
         {
             var message = new RequestMessage { SaySomething = "Say something" };
 
-            Bus.Send("helloWorldServer", message);
+            Bus.Send(message);
             
 			LogManager.GetLogger("MessageSender").Info("Sent message.");
         }
