@@ -6,9 +6,17 @@
 
 	class RequestHandler : IHandleMessages<Request>
     {
-        public void Handle(Request message)
+	    private readonly ISaySomething saysSomething;
+
+	    public RequestHandler(ISaySomething something)
+	    {
+	        saysSomething = something;
+	    }
+
+	    public void Handle(Request message)
         {
             LogManager.GetLogger("RequestHandler").Info(message.SaySomething);
+            LogManager.GetLogger("RequestHandler").Info(saysSomething.InResponseTo(message.SaySomething));
         }
     }
 }
