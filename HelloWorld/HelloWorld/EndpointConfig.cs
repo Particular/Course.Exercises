@@ -1,3 +1,5 @@
+using NServiceBus.Persistence;
+
 namespace HelloWorld 
 {
     using Messages;
@@ -6,15 +8,17 @@ namespace HelloWorld
 		This class configures this endpoint as a Server. More information about how to configure the NServiceBus host
 		can be found here: http://particular.net/articles/the-nservicebus-host
 	*/
-    public class EndpointConfig : IConfigureThisEndpoint, AsA_Client, IWantCustomInitialization
+    public class EndpointConfig : IConfigureThisEndpoint, AsA_Client
     {
-        public void Init()
+        public void Customize(BusConfiguration configuration)
         {
-	        Configure.Serialization.Xml(m => m.Namespace("http://acme.com/"));
+            configuration.UseSerialization<XmlSerializer>()
+                .Namespace("http://acme.com/");
 
-            Configure.With()
-                .DefaultBuilder()
+            configuration.Conventions()
                 .DefiningMessagesAs(t => t.Assembly == typeof(RequestMessage).Assembly && t.Name.EndsWith("Message"));
+
+            configuration.UsePersistence<RavenDBPersistence>();
         }
     }
 }

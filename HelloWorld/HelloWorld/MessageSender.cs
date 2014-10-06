@@ -11,15 +11,14 @@
         public void Start()
         {
             var message = new RequestMessage { SaySomething = "Say something" };
-            
-			Bus.Send(message);
+
+            Bus.Send(message);
             
 			LogManager.GetLogger("MessageSender").Info("Sent message.");
         }
 
         public void Stop()
         {
-
         }
     }
 }

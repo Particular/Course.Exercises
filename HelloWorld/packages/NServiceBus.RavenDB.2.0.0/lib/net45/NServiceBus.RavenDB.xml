@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NServiceBus.RavenDB</name>
+    </assembly>
+    <members>
+        <member name="T:NServiceBus.Gateway.Deduplication.GatewayMessage">
+            <summary>
+            The Gateway message
+            </summary>
+        </member>
+        <member name="P:NServiceBus.Gateway.Deduplication.GatewayMessage.Id">
+            <summary>
+            Id of this message.
+            </summary>
+        </member>
+        <member name="P:NServiceBus.Gateway.Deduplication.GatewayMessage.TimeReceived">
+            <summary>
+            The time at which the message was received.
+            </summary>
+        </member>
+        <member name="T:NServiceBus.RavenDB.Persistence.RavenUserInstaller">
+            <summary>
+            Add the identity to the Raven users group 
+            </summary>
+        </member>
+        <member name="T:NServiceBus.RavenDbGatewayDeduplicationSettingsExtensions">
+            <summary>
+            Configuration settings specific to the timeout storage
+            </summary>
+        </member>
+        <member name="M:NServiceBus.RavenDbGatewayDeduplicationSettingsExtensions.UseDocumentStoreForGatewayDeduplication(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence},Raven.Client.IDocumentStore)">
+            <summary>
+            Configures the given document store to be used when storing gateway deduplication data
+            </summary>
+            <param name="cfg"></param>
+            <param name="documentStore">The document store to use</param>
+            <returns></returns>
+        </member>
+        <member name="M:NServiceBus.RavenDB.Internal.Helpers.ApplyRavenDBConventions(NServiceBus.Settings.ReadOnlySettings,Raven.Client.IDocumentStore)">
+            <summary>
+            Apply the NServiceBus conventions to a <see cref="T:Raven.Client.Document.DocumentStore"/> .
+            </summary>
+        </member>
+        <member name="T:NServiceBus.RavenDB.ConnectionParameters">
+            <summary>
+            Connection parameters to be used when connecting to RavenDB
+            </summary>
+        </member>
+        <member name="P:NServiceBus.RavenDB.ConnectionParameters.Url">
+            <summary>
+            The url of the RavenDB server
+            </summary>
+        </member>
+        <member name="P:NServiceBus.RavenDB.ConnectionParameters.DatabaseName">
+            <summary>
+            The name of the database to use on the specified RavenDB server
+            </summary>
+        </member>
+        <member name="P:NServiceBus.RavenDB.ConnectionParameters.ApiKey">
+            <summary>
+            The RavenDB API key if needed
+            </summary>
+        </member>
+        <member name="T:NServiceBus.RavenDbSettingsExtensions">
+            <summary>
+            Provides configurations methods for the Raven storages
+            </summary>
+        </member>
+        <member name="M:NServiceBus.RavenDbSettingsExtensions.SetDefaultDocumentStore(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence},Raven.Client.IDocumentStore)">
+            <summary>
+            Configures the storages to use the given document store supplied
+            </summary>
+            <param name="cfg"></param>
+            <param name="documentStore">Document store managed by me as a user</param>
+            <returns></returns>
+        </member>
+        <member name="M:NServiceBus.RavenDbSettingsExtensions.SetDefaultDocumentStore(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence},NServiceBus.RavenDB.ConnectionParameters)">
+            <summary>
+            Configures the persisters to connection to the server specified
+            </summary>
+            <param name="cfg"></param>
+            <param name="connectionParameters">Connection details</param>
+            <returns></returns>
+        </member>
+        <member name="M:NServiceBus.RavenDbSettingsExtensions.UseSharedSession(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence},System.Func{Raven.Client.IDocumentSession})">
+            <summary>
+            Specifies the session that the shared persisters (saga + outbox) that should be used. The lifecycle is controled by me
+            </summary>
+            <param name="cfg"></param>
+            <param name="getSessionFunc">A func returning the session to be used</param>
+            <returns></returns>
+        </member>
+        <member name="M:NServiceBus.RavenDbSettingsExtensions.SetMessageToDatabaseMappingConvention(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence},System.Func{NServiceBus.IMessageContext,System.String})">
+            <summary>
+            Specifies the mapping to use for when resolving the database name to use for each message.
+            </summary>
+            <param name="cfg">The configuration object.</param>
+            <param name="convention">The method referenced by a Func delegate for finding the database name for the specified message.</param>
+            <returns>The configuration object.</returns>
+        </member>
+        <member name="M:NServiceBus.RavenDbSettingsExtensions.DoNotSetupDatabasePermissions(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence})">
+            <summary>
+            Tells the persister to not setup user permissions for the database
+            </summary>
+            <param name="cfg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NServiceBus.RavenDbSagaSettingsExtensions">
+            <summary>
+            Provides configuration options
+            </summary>
+        </member>
+        <member name="M:NServiceBus.RavenDbSagaSettingsExtensions.UseDocumentStoreForSagas(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence},Raven.Client.IDocumentStore)">
+            <summary>
+            Configures the given document store to be used when storing sagas
+            </summary>
+            <param name="cfg">Object to attach to</param>
+            <param name="documentStore">The document store to be used</param>
+            <returns></returns>
+        </member>
+        <member name="M:NServiceBus.RavenDbSagaSettingsExtensions.AllowStaleSagaReads(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence})">
+            <summary>
+            Tells the saga persister that it should allow potential stale queries when loading sagas
+            </summary>
+            <param name="cfg">Object to attach to</param>
+            <returns></returns>
+        </member>
+        <member name="T:NServiceBus.RavenDB.Persistence.ISessionProvider">
+            <summary>
+            Provides access the the session managed by NServiceBus
+            </summary>
+        </member>
+        <member name="P:NServiceBus.RavenDB.Persistence.ISessionProvider.Session">
+            <summary>
+            The session
+            </summary>
+        </member>
+        <member name="T:NServiceBus.Persistence.RavenDBPersistence">
+            <summary>
+            Specifies the capabilities of the ravendb suite of storages
+            </summary>
+        </member>
+        <member name="M:NServiceBus.Persistence.RavenDBPersistence.#ctor">
+            <summary>
+            Defines the capabilities
+            </summary>
+        </member>
+        <member name="T:NServiceBus.Features.RavenDbSagaStorage">
+            <summary>
+            RavenDB Saga Storage.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.Features.RavenDbSagaStorage.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:NServiceBus.Features.RavenDbSagaStorage"/>.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.Features.RavenDbSagaStorage.Setup(NServiceBus.Features.FeatureConfigurationContext)">
+            <summary>
+            Called when the feature should perform its initialization. This call will only happen if the feature is enabled.
+            </summary>
+        </member>
+        <member name="T:NServiceBus.RavenDbSubscriptionSettingsExtensions">
+            <summary>
+            Provides configuration options specific to the subscription storage
+            </summary>
+        </member>
+        <member name="M:NServiceBus.RavenDbSubscriptionSettingsExtensions.UseDocumentStoreForSubscriptions(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence},Raven.Client.IDocumentStore)">
+            <summary>
+            Configures the given document store to be used when storing subscriptions
+            </summary>
+            <param name="cfg"></param>
+            <param name="documentStore">The document store to use</param>
+            <returns></returns>
+        </member>
+        <member name="T:NServiceBus.RavenDbTimeoutSettingsExtensions">
+            <summary>
+            Configuration settings specific to the timeout storage
+            </summary>
+        </member>
+        <member name="M:NServiceBus.RavenDbTimeoutSettingsExtensions.UseDocumentStoreForTimeouts(NServiceBus.PersistenceExtentions{NServiceBus.Persistence.RavenDBPersistence},Raven.Client.IDocumentStore)">
+            <summary>
+            Configures the given document store to be used when storing timeouts
+            </summary>
+            <param name="cfg"></param>
+            <param name="documentStore">The document store to use</param>
+            <returns></returns>
+        </member>
+        <member name="P:NServiceBus.TimeoutPersisters.RavenDB.TimeoutData.Id">
+            <summary>
+            Id of this timeout
+            </summary>
+        </member>
+        <member name="P:NServiceBus.TimeoutPersisters.RavenDB.TimeoutData.Destination">
+            <summary>
+            The address of the client who requested the timeout.
+            </summary>
+        </member>
+        <member name="P:NServiceBus.TimeoutPersisters.RavenDB.TimeoutData.SagaId">
+            <summary>
+            The saga ID.
+            </summary>
+        </member>
+        <member name="P:NServiceBus.TimeoutPersisters.RavenDB.TimeoutData.State">
+            <summary>
+            Additional state.
+            </summary>
+        </member>
+        <member name="P:NServiceBus.TimeoutPersisters.RavenDB.TimeoutData.Time">
+            <summary>
+            The time at which the timeout expires.
+            </summary>
+        </member>
+        <member name="P:NServiceBus.TimeoutPersisters.RavenDB.TimeoutData.OwningTimeoutManager">
+            <summary>
+            The timeout manager that owns this particular timeout
+            </summary>
+        </member>
+        <member name="P:NServiceBus.TimeoutPersisters.RavenDB.TimeoutData.Headers">
+            <summary>
+            Store the headers to preserve them across timeouts
+            </summary>
+        </member>
+    </members>
+</doc>
