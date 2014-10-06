@@ -1,3 +1,5 @@
+using log4net.Config;
+using NServiceBus.Log4Net;
 using NServiceBus.Logging;
 
 namespace HelloWorld
@@ -13,6 +15,10 @@ namespace HelloWorld
     {
         public void Customize(BusConfiguration configuration)
         {
+            XmlConfigurator.Configure();
+
+            LogManager.Use<Log4NetFactory>();
+            
             configuration.UsePersistence<RavenDBPersistence>();
         }
 
