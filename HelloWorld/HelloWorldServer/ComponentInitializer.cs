@@ -1,4 +1,5 @@
-﻿namespace HelloWorldServer
+﻿
+namespace HelloWorldServer
 {
     using NServiceBus;
 

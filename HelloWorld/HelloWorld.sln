@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conventions", "Conventions\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityServiceAdapter", "SecurityServiceAdapter\SecurityServiceAdapter.csproj", "{FA9A3D14-5DF0-445B-96D3-C255B26DBD6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1", "MvcApplication1\MvcApplication1.csproj", "{9C88D0E1-5524-475D-80FA-D52B270D3AF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FA9A3D14-5DF0-445B-96D3-C255B26DBD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9A3D14-5DF0-445B-96D3-C255B26DBD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9A3D14-5DF0-445B-96D3-C255B26DBD6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C88D0E1-5524-475D-80FA-D52B270D3AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C88D0E1-5524-475D-80FA-D52B270D3AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C88D0E1-5524-475D-80FA-D52B270D3AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C88D0E1-5524-475D-80FA-D52B270D3AF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

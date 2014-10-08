@@ -12,11 +12,6 @@ namespace HelloWorldServer
     {
         public void Customize(BusConfiguration configuration)
         {
-            configuration.UseSerialization<XmlSerializer>()
-                .Namespace("http://acme.com/");
-
-            configuration.RijndaelEncryptionService();
-
             configuration.UsePersistence<RavenDBPersistence>();
         }
     }
