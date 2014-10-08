@@ -1,15 +1,18 @@
-﻿using System.Web.Mvc;
+﻿using System.Threading.Tasks;
+using System.Web.Mvc;
 using Messages;
 
 namespace MvcApplication1.Controllers
 {
-    public class SaySomethingController : Controller
+    public class SaySomethingController : AsyncController
     {
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            Startup.Bus.Send<Request>(m => m.SaySomething = "Say 'WebApp'.");
+            var message = new RequestWithResponse("Say 'WebApp'.");
 
-            return new ContentResult { Content = "Message sent" };
+            var response = await Startup.Bus.Send(message).Register();
+
+            return new ContentResult { Content = "Response from server " + response };
         }
     }
 }

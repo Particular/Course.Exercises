@@ -63,6 +63,7 @@
     <Compile Include="Ordering.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestHandler.cs" />
+    <Compile Include="RequestWithResponseHandler.cs" />
     <Compile Include="SaySomething.cs" />
   </ItemGroup>
   <ItemGroup>

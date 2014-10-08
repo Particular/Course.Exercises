@@ -10,7 +10,7 @@ namespace MvcApplication1
 {
     public partial class Startup
     {
-        public static ISendOnlyBus Bus { get; private set; }
+        public static IBus Bus { get; private set; }
 
         public void Configuration(IAppBuilder app)
         {
@@ -23,7 +23,7 @@ namespace MvcApplication1
 
             configuration.UsePersistence<RavenDBPersistence>();
 
-            Bus = NServiceBus.Bus.CreateSendOnly(configuration);
+            Bus = NServiceBus.Bus.Create(configuration).Start();
 
             token.Register(() => Bus.Dispose());
         }
