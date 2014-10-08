@@ -3,7 +3,7 @@ using NServiceBus;
 
 namespace HelloWorldServer
 {
-    class RequestWithResponseHandler : IHandleMessages<RequestWithResponse>
+    public class RequestWithResponseHandler : IHandleMessages<RequestWithResponse>
     {
         public IBus Bus { get; set; }
 

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityServiceAdapter", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1", "MvcApplication1\MvcApplication1.csproj", "{9C88D0E1-5524-475D-80FA-D52B270D3AF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldServer.Tests", "HelloWorldServer.Tests\HelloWorldServer.Tests.csproj", "{6198CF3B-5642-4A85-A899-3F6863009C43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9C88D0E1-5524-475D-80FA-D52B270D3AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C88D0E1-5524-475D-80FA-D52B270D3AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C88D0E1-5524-475D-80FA-D52B270D3AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6198CF3B-5642-4A85-A899-3F6863009C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6198CF3B-5642-4A85-A899-3F6863009C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6198CF3B-5642-4A85-A899-3F6863009C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6198CF3B-5642-4A85-A899-3F6863009C43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
