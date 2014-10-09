@@ -119,6 +119,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AuthenticationMutator.cs" />
+    <Compile Include="QueryResultHandler.cs" />
+    <Compile Include="Controllers\QuerySomethingController.cs" />
     <Compile Include="Controllers\SaySomethingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

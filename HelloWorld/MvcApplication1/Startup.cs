@@ -1,6 +1,7 @@
 ﻿using Microsoft.Owin;
 using Microsoft.Owin.BuilderProperties;
 using NServiceBus;
+using NServiceBus.Features;
 using NServiceBus.Persistence;
 using Owin;
 
@@ -21,6 +22,7 @@ namespace MvcApplication1
 
             configuration.ScaleOut().UseSingleBrokerQueue();
 
+            configuration.DisableFeature<AutoSubscribe>();
             configuration.UsePersistence<RavenDBPersistence>();
 
             Bus = NServiceBus.Bus.Create(configuration).Start();

@@ -43,6 +43,8 @@
     <Compile Include="EncryptedAttribute.cs" />
     <Compile Include="ExpiresAttribute.cs" />
     <Compile Include="MessageAttribute.cs" />
+    <Compile Include="Query.cs" />
+    <Compile Include="QueryResult.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestWithResponse.cs" />
