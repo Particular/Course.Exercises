@@ -1,7 +1,7 @@
 ﻿using Messages;
 using NServiceBus;
 
-namespace HelloWorldServer
+namespace HelloWorldQueryServer
 {
     public class QueryHandler : IHandleMessages<Query>
     {
