@@ -1,4 +1,6 @@
-﻿namespace HelloWorld
+﻿using System;
+
+namespace HelloWorld
 {
 	using NServiceBus.Logging;
 	using Messages;
@@ -12,7 +14,7 @@
         {
             Bus.OutgoingHeaders["user"] = "udi";
 
-            var message = new Request { SaySomething = "Say something" };
+            var message = new Request { SaySomething = "Say something", Guid = Guid.NewGuid() };
 
             Bus.Send(message);
             

@@ -10,6 +10,7 @@ namespace Conventions
         {
             configuration.Conventions()
                 .DefiningMessagesAs(type => type.GetCustomAttributes(true).Any(t => t.GetType().Name == "MessageAttribute"))
+                .DefiningEventsAs(type => type.GetCustomAttributes(true).Any(t => t.GetType().Name == "EventAttribute"))
                 .DefiningTimeToBeReceivedAs(GetExpiration)
                 .DefiningEncryptedPropertiesAs(p => p.GetCustomAttributes(true).Any(t => t.GetType().Name == "EncryptedAttribute"));
         }
