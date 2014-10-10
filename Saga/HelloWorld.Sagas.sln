@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Saga", "HelloWorld.Saga\HelloWorld.Saga.csproj", "{68905D51-8F2B-49AC-BABA-9DFB01DC9A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Messages", "HelloWorld.Messages\HelloWorld.Messages.csproj", "{3FBBF625-E429-4445-A8E8-EA7C93028823}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.FedexProxy", "HelloWorld.FedexProxy\HelloWorld.FedexProxy.csproj", "{F34F7AC4-ACB5-4158-8C24-D611F591DD33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.ShipToUps", "HelloWorld.ShipToUps\HelloWorld.ShipToUps.csproj", "{39AF7EE2-D3AB-4C36-90E3-1600FB9E230A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.MessageSender", "HelloWorld.MessageSender\HelloWorld.MessageSender.csproj", "{385A2C19-A983-4625-B87A-3EAC807361AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Sagas.Tests", "HelloWorld.Sagas.Tests\HelloWorld.Sagas.Tests.csproj", "{E75ED265-9872-4589-A126-90CFEDEFD425}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68905D51-8F2B-49AC-BABA-9DFB01DC9A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68905D51-8F2B-49AC-BABA-9DFB01DC9A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68905D51-8F2B-49AC-BABA-9DFB01DC9A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68905D51-8F2B-49AC-BABA-9DFB01DC9A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FBBF625-E429-4445-A8E8-EA7C93028823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBBF625-E429-4445-A8E8-EA7C93028823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBBF625-E429-4445-A8E8-EA7C93028823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBBF625-E429-4445-A8E8-EA7C93028823}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34F7AC4-ACB5-4158-8C24-D611F591DD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34F7AC4-ACB5-4158-8C24-D611F591DD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34F7AC4-ACB5-4158-8C24-D611F591DD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34F7AC4-ACB5-4158-8C24-D611F591DD33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39AF7EE2-D3AB-4C36-90E3-1600FB9E230A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39AF7EE2-D3AB-4C36-90E3-1600FB9E230A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39AF7EE2-D3AB-4C36-90E3-1600FB9E230A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39AF7EE2-D3AB-4C36-90E3-1600FB9E230A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{385A2C19-A983-4625-B87A-3EAC807361AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{385A2C19-A983-4625-B87A-3EAC807361AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385A2C19-A983-4625-B87A-3EAC807361AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{385A2C19-A983-4625-B87A-3EAC807361AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E75ED265-9872-4589-A126-90CFEDEFD425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E75ED265-9872-4589-A126-90CFEDEFD425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E75ED265-9872-4589-A126-90CFEDEFD425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E75ED265-9872-4589-A126-90CFEDEFD425}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
