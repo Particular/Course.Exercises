@@ -12,7 +12,8 @@ namespace HelloWorldServer
     {
         public void Customize(BusConfiguration configuration)
         {
-            configuration.UsePersistence<RavenDBPersistence>();
+            //configuration.UsePersistence<RavenDBPersistence>();
+            configuration.UsePersistence<InMemoryPersistence>();
         }
     }
 }
