@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using NServiceBus;
-
-namespace Conventions
+﻿namespace Conventions
 {
+    using System;
+    using System.Linq;
+    using NServiceBus;
+
     public class ConventionsConfiguration : INeedInitialization
     {
         public void Customize(BusConfiguration configuration)

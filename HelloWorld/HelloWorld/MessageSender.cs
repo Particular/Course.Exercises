@@ -1,8 +1,7 @@
-﻿using System;
-
-namespace HelloWorld
+﻿namespace HelloWorld
 {
-	using NServiceBus.Logging;
+    using System;
+    using NServiceBus.Logging;
 	using Messages;
 	using NServiceBus;
 

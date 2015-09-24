@@ -1,9 +1,9 @@
-using Messages;
-using NServiceBus;
-using NServiceBus.Logging;
-
 namespace HelloWorldSubscriber
 {
+    using Messages;
+    using NServiceBus;
+    using NServiceBus.Logging;
+
     public class SomethingWasSaidHandler : IHandleMessages<SomethingWasSaid>
     {
         public IBus Bus { get; set; }

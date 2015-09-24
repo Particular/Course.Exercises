@@ -1,0 +1,1466 @@
+﻿2015-09-22 09:58:16.762 INFO  DefaultFactory Logging to 'C:\Code\Particular\Course.Exercises\HelloWorld\WebApplication4\App_Data\' with level Info
+2015-09-22 10:07:54.130 INFO  DefaultFactory Logging to 'C:\Code\Particular\Course.Exercises\HelloWorld\WebApplication4\App_Data\' with level Info
+2015-09-22 10:25:20.265 INFO  DefaultFactory Logging to 'C:\Code\Particular\Course.Exercises\HelloWorld\WebApplication4\App_Data\' with level Info
+2015-09-22 10:25:20.429 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'GatewayDeduplication' storage.
+2015-09-22 10:25:20.437 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Timeouts' storage.
+2015-09-22 10:25:20.443 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Sagas' storage.
+2015-09-22 10:25:20.448 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Subscriptions' storage.
+2015-09-22 10:31:05.718 INFO  DefaultFactory Logging to 'C:\Code\Particular\Course.Exercises\HelloWorld\WebApplication4\App_Data\' with level Info
+2015-09-22 10:31:05.783 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'GatewayDeduplication' storage.
+2015-09-22 10:31:05.791 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Timeouts' storage.
+2015-09-22 10:31:05.796 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Sagas' storage.
+2015-09-22 10:31:05.804 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Subscriptions' storage.
+2015-09-22 10:32:15.789 INFO  DefaultFactory Logging to 'C:\Code\Particular\Course.Exercises\HelloWorld\WebApplication4\App_Data\' with level Info
+2015-09-22 10:32:15.865 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'GatewayDeduplication' storage.
+2015-09-22 10:32:15.873 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Timeouts' storage.
+2015-09-22 10:32:15.879 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Sagas' storage.
+2015-09-22 10:32:15.885 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Subscriptions' storage.
+2015-09-22 10:32:16.027 INFO  NServiceBus.Licensing.LicenseManager UpgradeProtectionExpiration: 18/06/2015 00:00:00
+2015-09-22 10:32:16.096 INFO  NServiceBus.Features.UnicastBus Number of messages found: 1
+2015-09-22 10:32:17.462 INFO  NServiceBus.RavenDB.Internal.ConnectionVerifier Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.5.0 / 6dce79a, Build version: 2970
+2015-09-22 10:32:17.496 INFO  NServiceBus.RavenDB.Persistence.RavenUserInstaller Adding user 'SeanFarmar-PC\Sean Farmar' to raven. Instance:'http://localhost:8080', Database:'System.Web'.
+2015-09-22 10:32:17.591 WARN  NServiceBus.RavenDB.Persistence.RavenUserInstaller Failed to add user to raven. Processing will continue
+System.InvalidOperationException: Url: "/docs/Raven%2FAuthorization%2FWindowsSettings"
+
+Raven.Abstractions.Exceptions.OperationVetoedException: PUT vetoed on document Raven/Authorization/WindowsSettings by Raven.Database.Server.Security.Triggers.WindowsAuthPutTrigger because: Cannot setup Windows Authentication without a valid commercial license.
+   at Raven.Database.DocumentDatabase.AssertPutOperationNotVetoed(String key, RavenJObject metadata, RavenJObject document, TransactionInformation transactionInformation)
+   at Raven.Database.DocumentDatabase.<>c__DisplayClass4b.<Put>b__43(IStorageActionsAccessor actions)
+   at Raven.Storage.Esent.TransactionalStorage.ExecuteBatch(Action`1 action, EsentTransactionContext transactionContext)
+   at Raven.Storage.Esent.TransactionalStorage.Batch(Action`1 action)
+   at Raven.Database.DocumentDatabase.Put(String key, Etag etag, RavenJObject document, RavenJObject metadata, TransactionInformation transactionInformation, String[] participatingIds)
+   at Raven.Database.Server.Responders.Document.Put(IHttpContext context, String docId)
+   at Raven.Database.Server.Responders.Document.Respond(IHttpContext context)
+   at Raven.Database.Server.HttpServer.DispatchRequest(IHttpContext ctx)
+   at Raven.Database.Server.HttpServer.HandleActualRequest(IHttpContext ctx)
+ ---> System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Raven.Client.Connection.HttpJsonRequest.ReadJsonInternal(Func`1 getResponse)
+   --- End of inner exception stack trace ---
+   at Raven.Client.Connection.HttpJsonRequest.HandleErrors(WebException e)
+   at Raven.Client.Connection.HttpJsonRequest.ReadJsonInternal(Func`1 getResponse)
+   at Raven.Client.Connection.HttpJsonRequest.ReadResponseJson()
+   at Raven.Client.Connection.ServerClient.DirectPut(RavenJObject metadata, String key, Etag etag, RavenJObject document, OperationMetadata operationMetadata)
+   at Raven.Client.Connection.ServerClient.<>c__DisplayClass13.<Put>b__12(OperationMetadata u)
+   at Raven.Client.Connection.ReplicationInformer.TryOperation[T](Func`2 operation, OperationMetadata operationMetadata, OperationMetadata primaryOperationMetadata, Boolean avoidThrowing, T& result, Boolean& wasTimeout)
+   at Raven.Client.Connection.ReplicationInformer.ExecuteWithReplication[T](String method, String primaryUrl, OperationCredentials primaryCredentials, Int32 currentRequest, Int32 currentReadStripingBase, Func`2 operation)
+   at Raven.Client.Connection.ServerClient.ExecuteWithReplication[T](String method, Func`2 operation)
+   at Raven.Client.Connection.ServerClient.Put(String key, Etag etag, RavenJObject document, RavenJObject metadata)
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.InvokePut(IDatabaseCommands systemCommands, RavenJObject ravenJObject) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 83
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.AddUserToDatabase(String identity, DocumentStore documentStore) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 76
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.Install(String identity, Configure config) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 42
+2015-09-22 10:32:17.814 INFO  NServiceBus.PerformanceMonitorUsersInstaller Skipped adding user 'SeanFarmar-PC\Sean Farmar' to group 'Performance Monitor Users' because the user is already in group.
+2015-09-22 10:32:17.851 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: CriticalErrorHandling
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Encryptor
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwarderFaultManager
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: InMemoryFaultManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: CriticalTimeMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No configured audit queue was found
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Scheduler cannot be used from a sendonly endpoint
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: RegisterHandlersInOrder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: SLAMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: LicenseReminder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BinarySerialization not enable since serialization definition not detected.
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BsonSerialization not enable since serialization definition not detected.
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -JsonSerialization not enable since serialization definition not detected.
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransportConfigurator
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't use the timeoutmanager since it requires receive capabilities
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't use SLR since it requires receive capabilities
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbGatewayDeduplication
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: SharedDocumentStore
+Version: 2.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbStorageSession
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [RavenDbSagaStorage]
+
+Name: RavenDbSagaStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: RavenDbSubscriptionStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [StorageDrivenPublishing],[SharedDocumentStore]
+Startup Tasks: None
+
+Name: RavenDbTimeoutStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+
+2015-09-22 10:35:31.432 INFO  DefaultFactory Logging to 'C:\Code\Particular\Course.Exercises\HelloWorld\WebApplication4\App_Data\' with level Info
+2015-09-22 10:35:31.563 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'GatewayDeduplication' storage.
+2015-09-22 10:35:31.598 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Timeouts' storage.
+2015-09-22 10:35:31.612 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Sagas' storage.
+2015-09-22 10:35:31.624 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Subscriptions' storage.
+2015-09-22 10:35:31.915 INFO  NServiceBus.Licensing.LicenseManager UpgradeProtectionExpiration: 18/06/2015 00:00:00
+2015-09-22 10:35:32.015 INFO  NServiceBus.Features.UnicastBus Number of messages found: 1
+2015-09-22 10:35:32.411 INFO  NServiceBus.RavenDB.Internal.ConnectionVerifier Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.5.0 / 6dce79a, Build version: 2970
+2015-09-22 10:35:32.472 INFO  NServiceBus.RavenDB.Persistence.RavenUserInstaller Adding user 'SeanFarmar-PC\Sean Farmar' to raven. Instance:'http://localhost:8080', Database:'System.Web'.
+2015-09-22 10:35:32.712 WARN  NServiceBus.RavenDB.Persistence.RavenUserInstaller Failed to add user to raven. Processing will continue
+System.InvalidOperationException: Url: "/docs/Raven%2FAuthorization%2FWindowsSettings"
+
+Raven.Abstractions.Exceptions.OperationVetoedException: PUT vetoed on document Raven/Authorization/WindowsSettings by Raven.Database.Server.Security.Triggers.WindowsAuthPutTrigger because: Cannot setup Windows Authentication without a valid commercial license.
+   at Raven.Database.DocumentDatabase.AssertPutOperationNotVetoed(String key, RavenJObject metadata, RavenJObject document, TransactionInformation transactionInformation)
+   at Raven.Database.DocumentDatabase.<>c__DisplayClass4b.<Put>b__43(IStorageActionsAccessor actions)
+   at Raven.Storage.Esent.TransactionalStorage.ExecuteBatch(Action`1 action, EsentTransactionContext transactionContext)
+   at Raven.Storage.Esent.TransactionalStorage.Batch(Action`1 action)
+   at Raven.Database.DocumentDatabase.Put(String key, Etag etag, RavenJObject document, RavenJObject metadata, TransactionInformation transactionInformation, String[] participatingIds)
+   at Raven.Database.Server.Responders.Document.Put(IHttpContext context, String docId)
+   at Raven.Database.Server.Responders.Document.Respond(IHttpContext context)
+   at Raven.Database.Server.HttpServer.DispatchRequest(IHttpContext ctx)
+   at Raven.Database.Server.HttpServer.HandleActualRequest(IHttpContext ctx)
+ ---> System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Raven.Client.Connection.HttpJsonRequest.ReadJsonInternal(Func`1 getResponse)
+   --- End of inner exception stack trace ---
+   at Raven.Client.Connection.HttpJsonRequest.HandleErrors(WebException e)
+   at Raven.Client.Connection.HttpJsonRequest.ReadJsonInternal(Func`1 getResponse)
+   at Raven.Client.Connection.HttpJsonRequest.ReadResponseJson()
+   at Raven.Client.Connection.ServerClient.DirectPut(RavenJObject metadata, String key, Etag etag, RavenJObject document, OperationMetadata operationMetadata)
+   at Raven.Client.Connection.ServerClient.<>c__DisplayClass13.<Put>b__12(OperationMetadata u)
+   at Raven.Client.Connection.ReplicationInformer.TryOperation[T](Func`2 operation, OperationMetadata operationMetadata, OperationMetadata primaryOperationMetadata, Boolean avoidThrowing, T& result, Boolean& wasTimeout)
+   at Raven.Client.Connection.ReplicationInformer.ExecuteWithReplication[T](String method, String primaryUrl, OperationCredentials primaryCredentials, Int32 currentRequest, Int32 currentReadStripingBase, Func`2 operation)
+   at Raven.Client.Connection.ServerClient.ExecuteWithReplication[T](String method, Func`2 operation)
+   at Raven.Client.Connection.ServerClient.Put(String key, Etag etag, RavenJObject document, RavenJObject metadata)
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.InvokePut(IDatabaseCommands systemCommands, RavenJObject ravenJObject) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 83
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.AddUserToDatabase(String identity, DocumentStore documentStore) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 76
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.Install(String identity, Configure config) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 42
+2015-09-22 10:35:32.813 INFO  NServiceBus.PerformanceMonitorUsersInstaller Skipped adding user 'SeanFarmar-PC\Sean Farmar' to group 'Performance Monitor Users' because the user is already in group.
+2015-09-22 10:35:32.860 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: CriticalErrorHandling
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Encryptor
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwarderFaultManager
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: InMemoryFaultManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: CriticalTimeMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No configured audit queue was found
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Scheduler cannot be used from a sendonly endpoint
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: RegisterHandlersInOrder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: SLAMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: LicenseReminder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BinarySerialization not enable since serialization definition not detected.
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BsonSerialization not enable since serialization definition not detected.
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -JsonSerialization not enable since serialization definition not detected.
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransportConfigurator
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't use the timeoutmanager since it requires receive capabilities
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't use SLR since it requires receive capabilities
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbGatewayDeduplication
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: SharedDocumentStore
+Version: 2.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbStorageSession
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [RavenDbSagaStorage]
+
+Name: RavenDbSagaStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: RavenDbSubscriptionStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [StorageDrivenPublishing],[SharedDocumentStore]
+Startup Tasks: None
+
+Name: RavenDbTimeoutStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+
+2015-09-22 10:44:43.525 INFO  DefaultFactory Logging to 'C:\Code\Particular\Course.Exercises\HelloWorld\WebApplication4\App_Data\' with level Info
+2015-09-22 10:44:43.627 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'GatewayDeduplication' storage.
+2015-09-22 10:44:43.662 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Timeouts' storage.
+2015-09-22 10:44:43.674 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Sagas' storage.
+2015-09-22 10:44:43.681 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Subscriptions' storage.
+2015-09-22 10:44:43.811 INFO  NServiceBus.Licensing.LicenseManager UpgradeProtectionExpiration: 18/06/2015 00:00:00
+2015-09-22 10:44:43.895 INFO  NServiceBus.Features.UnicastBus Number of messages found: 1
+2015-09-22 10:44:44.140 INFO  NServiceBus.RavenDB.Internal.ConnectionVerifier Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.5.0 / 6dce79a, Build version: 2970
+2015-09-22 10:44:44.170 INFO  NServiceBus.RavenDB.Persistence.RavenUserInstaller Adding user 'SeanFarmar-PC\Sean Farmar' to raven. Instance:'http://localhost:8080', Database:'System.Web'.
+2015-09-22 10:44:44.277 WARN  NServiceBus.RavenDB.Persistence.RavenUserInstaller Failed to add user to raven. Processing will continue
+System.InvalidOperationException: Url: "/docs/Raven%2FAuthorization%2FWindowsSettings"
+
+Raven.Abstractions.Exceptions.OperationVetoedException: PUT vetoed on document Raven/Authorization/WindowsSettings by Raven.Database.Server.Security.Triggers.WindowsAuthPutTrigger because: Cannot setup Windows Authentication without a valid commercial license.
+   at Raven.Database.DocumentDatabase.AssertPutOperationNotVetoed(String key, RavenJObject metadata, RavenJObject document, TransactionInformation transactionInformation)
+   at Raven.Database.DocumentDatabase.<>c__DisplayClass4b.<Put>b__43(IStorageActionsAccessor actions)
+   at Raven.Storage.Esent.TransactionalStorage.ExecuteBatch(Action`1 action, EsentTransactionContext transactionContext)
+   at Raven.Storage.Esent.TransactionalStorage.Batch(Action`1 action)
+   at Raven.Database.DocumentDatabase.Put(String key, Etag etag, RavenJObject document, RavenJObject metadata, TransactionInformation transactionInformation, String[] participatingIds)
+   at Raven.Database.Server.Responders.Document.Put(IHttpContext context, String docId)
+   at Raven.Database.Server.Responders.Document.Respond(IHttpContext context)
+   at Raven.Database.Server.HttpServer.DispatchRequest(IHttpContext ctx)
+   at Raven.Database.Server.HttpServer.HandleActualRequest(IHttpContext ctx)
+ ---> System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Raven.Client.Connection.HttpJsonRequest.ReadJsonInternal(Func`1 getResponse)
+   --- End of inner exception stack trace ---
+   at Raven.Client.Connection.HttpJsonRequest.HandleErrors(WebException e)
+   at Raven.Client.Connection.HttpJsonRequest.ReadJsonInternal(Func`1 getResponse)
+   at Raven.Client.Connection.HttpJsonRequest.ReadResponseJson()
+   at Raven.Client.Connection.ServerClient.DirectPut(RavenJObject metadata, String key, Etag etag, RavenJObject document, OperationMetadata operationMetadata)
+   at Raven.Client.Connection.ServerClient.<>c__DisplayClass13.<Put>b__12(OperationMetadata u)
+   at Raven.Client.Connection.ReplicationInformer.TryOperation[T](Func`2 operation, OperationMetadata operationMetadata, OperationMetadata primaryOperationMetadata, Boolean avoidThrowing, T& result, Boolean& wasTimeout)
+   at Raven.Client.Connection.ReplicationInformer.ExecuteWithReplication[T](String method, String primaryUrl, OperationCredentials primaryCredentials, Int32 currentRequest, Int32 currentReadStripingBase, Func`2 operation)
+   at Raven.Client.Connection.ServerClient.ExecuteWithReplication[T](String method, Func`2 operation)
+   at Raven.Client.Connection.ServerClient.Put(String key, Etag etag, RavenJObject document, RavenJObject metadata)
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.InvokePut(IDatabaseCommands systemCommands, RavenJObject ravenJObject) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 83
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.AddUserToDatabase(String identity, DocumentStore documentStore) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 76
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.Install(String identity, Configure config) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 42
+2015-09-22 10:44:44.340 INFO  NServiceBus.PerformanceMonitorUsersInstaller Skipped adding user 'SeanFarmar-PC\Sean Farmar' to group 'Performance Monitor Users' because the user is already in group.
+2015-09-22 10:44:44.373 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: CriticalErrorHandling
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Encryptor
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwarderFaultManager
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: InMemoryFaultManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: CriticalTimeMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No configured audit queue was found
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Scheduler cannot be used from a sendonly endpoint
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: RegisterHandlersInOrder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: SLAMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: LicenseReminder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BinarySerialization not enable since serialization definition not detected.
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BsonSerialization not enable since serialization definition not detected.
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -JsonSerialization not enable since serialization definition not detected.
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransportConfigurator
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't use the timeoutmanager since it requires receive capabilities
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't use SLR since it requires receive capabilities
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbGatewayDeduplication
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: SharedDocumentStore
+Version: 2.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbStorageSession
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [RavenDbSagaStorage]
+
+Name: RavenDbSagaStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: RavenDbSubscriptionStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [StorageDrivenPublishing],[SharedDocumentStore]
+Startup Tasks: None
+
+Name: RavenDbTimeoutStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+
+2015-09-22 10:47:48.494 INFO  DefaultFactory Logging to 'C:\Code\Particular\Course.Exercises\HelloWorld\WebApplication4\App_Data\' with level Info
+2015-09-22 10:47:48.583 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'GatewayDeduplication' storage.
+2015-09-22 10:47:48.597 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Timeouts' storage.
+2015-09-22 10:47:48.604 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Sagas' storage.
+2015-09-22 10:47:48.616 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Subscriptions' storage.
+2015-09-22 10:47:48.745 INFO  NServiceBus.Licensing.LicenseManager UpgradeProtectionExpiration: 18/06/2015 00:00:00
+2015-09-22 10:47:48.834 INFO  NServiceBus.Features.UnicastBus Number of messages found: 1
+2015-09-22 10:47:49.111 INFO  NServiceBus.RavenDB.Internal.ConnectionVerifier Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.5.0 / 6dce79a, Build version: 2970
+2015-09-22 10:47:49.162 INFO  NServiceBus.RavenDB.Persistence.RavenUserInstaller Adding user 'SeanFarmar-PC\Sean Farmar' to raven. Instance:'http://localhost:8080', Database:'System.Web'.
+2015-09-22 10:47:49.452 WARN  NServiceBus.RavenDB.Persistence.RavenUserInstaller Failed to add user to raven. Processing will continue
+System.InvalidOperationException: Url: "/docs/Raven%2FAuthorization%2FWindowsSettings"
+
+Raven.Abstractions.Exceptions.OperationVetoedException: PUT vetoed on document Raven/Authorization/WindowsSettings by Raven.Database.Server.Security.Triggers.WindowsAuthPutTrigger because: Cannot setup Windows Authentication without a valid commercial license.
+   at Raven.Database.DocumentDatabase.AssertPutOperationNotVetoed(String key, RavenJObject metadata, RavenJObject document, TransactionInformation transactionInformation)
+   at Raven.Database.DocumentDatabase.<>c__DisplayClass4b.<Put>b__43(IStorageActionsAccessor actions)
+   at Raven.Storage.Esent.TransactionalStorage.ExecuteBatch(Action`1 action, EsentTransactionContext transactionContext)
+   at Raven.Storage.Esent.TransactionalStorage.Batch(Action`1 action)
+   at Raven.Database.DocumentDatabase.Put(String key, Etag etag, RavenJObject document, RavenJObject metadata, TransactionInformation transactionInformation, String[] participatingIds)
+   at Raven.Database.Server.Responders.Document.Put(IHttpContext context, String docId)
+   at Raven.Database.Server.Responders.Document.Respond(IHttpContext context)
+   at Raven.Database.Server.HttpServer.DispatchRequest(IHttpContext ctx)
+   at Raven.Database.Server.HttpServer.HandleActualRequest(IHttpContext ctx)
+ ---> System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Raven.Client.Connection.HttpJsonRequest.ReadJsonInternal(Func`1 getResponse)
+   --- End of inner exception stack trace ---
+   at Raven.Client.Connection.HttpJsonRequest.HandleErrors(WebException e)
+   at Raven.Client.Connection.HttpJsonRequest.ReadJsonInternal(Func`1 getResponse)
+   at Raven.Client.Connection.HttpJsonRequest.ReadResponseJson()
+   at Raven.Client.Connection.ServerClient.DirectPut(RavenJObject metadata, String key, Etag etag, RavenJObject document, OperationMetadata operationMetadata)
+   at Raven.Client.Connection.ServerClient.<>c__DisplayClass13.<Put>b__12(OperationMetadata u)
+   at Raven.Client.Connection.ReplicationInformer.TryOperation[T](Func`2 operation, OperationMetadata operationMetadata, OperationMetadata primaryOperationMetadata, Boolean avoidThrowing, T& result, Boolean& wasTimeout)
+   at Raven.Client.Connection.ReplicationInformer.ExecuteWithReplication[T](String method, String primaryUrl, OperationCredentials primaryCredentials, Int32 currentRequest, Int32 currentReadStripingBase, Func`2 operation)
+   at Raven.Client.Connection.ServerClient.ExecuteWithReplication[T](String method, Func`2 operation)
+   at Raven.Client.Connection.ServerClient.Put(String key, Etag etag, RavenJObject document, RavenJObject metadata)
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.InvokePut(IDatabaseCommands systemCommands, RavenJObject ravenJObject) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 83
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.AddUserToDatabase(String identity, DocumentStore documentStore) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 76
+   at NServiceBus.RavenDB.Persistence.RavenUserInstaller.Install(String identity, Configure config) in c:\BuildAgent\work\9b594c1b0f1d3bab\src\NServiceBus.RavenDB\Internal\RavenUserInstaller.cs:line 42
+2015-09-22 10:47:49.581 INFO  NServiceBus.PerformanceMonitorUsersInstaller Skipped adding user 'SeanFarmar-PC\Sean Farmar' to group 'Performance Monitor Users' because the user is already in group.
+2015-09-22 10:47:49.637 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: CriticalErrorHandling
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Encryptor
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwarderFaultManager
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: InMemoryFaultManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: CriticalTimeMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No configured audit queue was found
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Scheduler cannot be used from a sendonly endpoint
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: RegisterHandlersInOrder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: SLAMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: LicenseReminder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BinarySerialization not enable since serialization definition not detected.
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BsonSerialization not enable since serialization definition not detected.
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -JsonSerialization not enable since serialization definition not detected.
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransportConfigurator
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't use the timeoutmanager since it requires receive capabilities
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't use SLR since it requires receive capabilities
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbGatewayDeduplication
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: SharedDocumentStore
+Version: 2.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbStorageSession
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [RavenDbSagaStorage]
+
+Name: RavenDbSagaStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: RavenDbSubscriptionStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [StorageDrivenPublishing],[SharedDocumentStore]
+Startup Tasks: None
+
+Name: RavenDbTimeoutStorage
+Version: 2.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+
+2015-09-22 17:42:52.170 INFO  DefaultFactory Logging to 'C:\Code\Particular\Course.Exercises\HelloWorld\WebApplication1\App_Data\' with level Info
+2015-09-22 17:42:52.273 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'InMemoryPersistence' to provide storage for 'NServiceBus.Persistence.StorageType+Sagas' storage.
+2015-09-22 17:42:52.279 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'InMemoryPersistence' to provide storage for 'NServiceBus.Persistence.StorageType+Timeouts' storage.
+2015-09-22 17:42:52.286 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'InMemoryPersistence' to provide storage for 'NServiceBus.Persistence.StorageType+Subscriptions' storage.
+2015-09-22 17:42:52.293 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'InMemoryPersistence' to provide storage for 'NServiceBus.Persistence.StorageType+Outbox' storage.
+2015-09-22 17:42:52.301 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'InMemoryPersistence' to provide storage for 'NServiceBus.Persistence.StorageType+GatewayDeduplication' storage.
+2015-09-22 17:42:52.460 INFO  NServiceBus.Licensing.LicenseManager UpgradeProtectionExpiration: 18/06/2015 00:00:00
+2015-09-22 17:42:52.496 INFO  NServiceBus.Features.UnicastBus Number of messages found: 1
+2015-09-22 17:42:52.683 INFO  NServiceBus.PerformanceMonitorUsersInstaller Skipped adding user 'SeanFarmar-PC\Sean Farmar' to group 'Performance Monitor Users' because the user is already in group.
+2015-09-22 17:42:52.707 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: CriticalErrorHandling
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: CustomIDataBus
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [DataBus]
+
+Name: DataBus
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: Encryptor
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ErrorSubscribers
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwarderFaultManager
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't be used to forward received messages to the error queue as the endpoint requires receive capabilities
+
+Name: InMemoryFaultManager
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InstallationSupport
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: CriticalTimeMonitoring
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Audit
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No configured audit queue was found
+
+Name: AutoSubscribe
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Scheduler cannot be used from a sendonly endpoint
+
+Name: CustomSerialization
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -CustomSerialization not enable since serialization definition not detected.
+
+Name: ForwardReceivedMessages
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No forwarding address was defined in the unicastbus config
+
+Name: RegisterHandlersInOrder
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: SLAMonitoring
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: LicenseReminder
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.2.6
+Enabled by Default: No
+Status: Enabled
+Dependencies: [MessageDrivenSubscriptions]
+Startup Tasks: None
+
+Name: InMemoryTimeoutPersistence
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.2.6
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: UnicastBus
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BinarySerialization not enable since serialization definition not detected.
+
+Name: BsonSerialization
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BsonSerialization not enable since serialization definition not detected.
+
+Name: JsonSerialization
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -JsonSerialization not enable since serialization definition not detected.
+
+Name: XmlSerialization
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransportConfigurator
+Version: 5.2.6
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -Send only endpoints can't use the timeoutmanager since it requires receive capabilities
+
+Name: Sagas
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scanned types
+
+Name: SecondLevelRetries
+Version: 5.2.6
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [ForwarderFaultManager]
+
+Name: DataBusFileBased
+Version: 5.2.6
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [DataBus]
+
+Name: StorageDrivenPublishing
+Version: 5.2.6
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.2.6
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+
