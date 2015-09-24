@@ -29,7 +29,7 @@ namespace WebApplication1
             //configuration.UsePersistence<InMemoryPersistence>();
             configuration.EnableInstallers();
             configuration.EndpointName("WebApplication1");
-            Bus = NServiceBus.Bus.Create(configuration);
+            Bus = NServiceBus.Bus.Create(configuration).Start();
 
             token.Register(() => Bus.Dispose());
         }
