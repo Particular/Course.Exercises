@@ -9,6 +9,7 @@ namespace HelloWorldServer
 
         public void Handle(RequestWithResponse message)
         {
+            
             Bus.Return(message.SaySomething.Length % 2);
         }
     }
