@@ -1,7 +1,8 @@
 ﻿namespace HelloWorld.Saga
 {
     using System;
-    using Messages;
+    using Messages.Commands;
+    using Messages.Messages;
     using NServiceBus;
     using NServiceBus.Saga;
 
@@ -19,7 +20,7 @@
 
         public void Handle(ShippOrder msg)
         {
-            Data.Id = msg.OrderId;
+            Data.OrderId = msg.OrderId;
 
             Data.OrderDetails = msg.ProductName + " " + msg.ShippingAddress;
 
@@ -44,7 +45,7 @@
             Bus.Send<ShipToUps>(m =>
             {
                 m.Data = Data.OrderDetails;
-                m.OrderId = Data.Id;
+                m.OrderId = Data.OrderId;
             });
         }
 
@@ -58,10 +59,13 @@
 
     public class ShippingSagaData : IContainSagaData
     {
+        public bool SentToFedex { get; set; }
+        public string OrderDetails { get; set; }
+        public Guid OrderId { get; set; }
+
+        // IContainSagaData
         public Guid Id { get; set; }
         public string Originator { get; set; }
         public string OriginalMessageId { get; set; }
-        public bool SentToFedex { get; set; }
-        public string OrderDetails { get; set; }
     }
 }

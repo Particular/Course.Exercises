@@ -1,8 +1,7 @@
-﻿using System;
-
-namespace HelloWorld.MessageSender
+﻿namespace HelloWorld.MessageSender
 {
-    using Messages;
+    using System;
+    using Messages.Commands;
     using NServiceBus;
 
     public class SendOrder : IWantToRunWhenBusStartsAndStops

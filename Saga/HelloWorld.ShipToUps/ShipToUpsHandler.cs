@@ -2,6 +2,8 @@
 {
     using System;
     using Messages;
+    using Messages.Commands;
+    using Messages.Messages;
     using NServiceBus;
 
     public class ShipToUpsHandler : IHandleMessages<ShipToUps>

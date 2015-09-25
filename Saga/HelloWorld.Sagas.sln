@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Saga", "HelloWorld.Saga\HelloWorld.Saga.csproj", "{68905D51-8F2B-49AC-BABA-9DFB01DC9A4E}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.MessageSender", "HelloWorld.MessageSender\HelloWorld.MessageSender.csproj", "{385A2C19-A983-4625-B87A-3EAC807361AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Sagas.Tests", "HelloWorld.Sagas.Tests\HelloWorld.Sagas.Tests.csproj", "{E75ED265-9872-4589-A126-90CFEDEFD425}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conventions", "Conventions\Conventions.csproj", "{69055E50-FF2D-40CD-8668-D8313362B913}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{E75ED265-9872-4589-A126-90CFEDEFD425}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E75ED265-9872-4589-A126-90CFEDEFD425}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E75ED265-9872-4589-A126-90CFEDEFD425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69055E50-FF2D-40CD-8668-D8313362B913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69055E50-FF2D-40CD-8668-D8313362B913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69055E50-FF2D-40CD-8668-D8313362B913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69055E50-FF2D-40CD-8668-D8313362B913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

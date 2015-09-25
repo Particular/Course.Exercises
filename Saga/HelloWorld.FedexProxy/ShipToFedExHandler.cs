@@ -2,6 +2,8 @@
 {
     using System;
     using Messages;
+    using Messages.Commands;
+    using Messages.Messages;
     using NServiceBus;
 
     public class ShipToFedExHandler : IHandleMessages<ShipToFedEx>
@@ -10,7 +12,6 @@
 
         public void Handle(ShipToFedEx message)
         {
-
             Console.WriteLine("Handling ShipToFedex with id: {0}", message.OrderId);
 
             Bus.Reply<FedExResponse>(m => { m.OrderId = message.OrderId; });

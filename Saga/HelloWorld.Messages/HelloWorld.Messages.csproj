@@ -30,23 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NServiceBus.Core">
-      <HintPath>..\packages\NServiceBus.5.0.0\lib\net45\NServiceBus.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UpsResponse.cs" />
-    <Compile Include="FedExResponse.cs" />
-    <Compile Include="FedexTimedOut.cs" />
+    <Compile Include="ExpiresAttribute.cs" />
+    <Compile Include="Messages\UpsResponse.cs" />
+    <Compile Include="Messages\FedExResponse.cs" />
+    <Compile Include="Messages\FedexTimedOut.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShippOrder.cs" />
-    <Compile Include="ShipToFedEx.cs" />
-    <Compile Include="ShipToUps.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="Commands\ShippOrder.cs" />
+    <Compile Include="Commands\ShipToFedEx.cs" />
+    <Compile Include="Commands\ShipToUps.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

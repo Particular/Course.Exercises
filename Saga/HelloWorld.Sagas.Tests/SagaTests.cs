@@ -2,6 +2,7 @@
 {
     using System;
     using Messages;
+    using Messages.Commands;
     using NServiceBus.Testing;
     using NUnit.Framework;
     using Saga;
